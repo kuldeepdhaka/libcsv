@@ -1,0 +1,15 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+REL_PATH:= ../..
+ABS_PATH:= $(LOCAL_PATH)/$(REL_PATH)
+
+LOCAL_SRC_FILES:= $(REL_PATH)/libcsv.c
+LOCAL_C_INCLUDES:= $(ABS_PATH)
+LOCAL_EXPORT_C_INCLUDES:= $(ABS_PATH)
+LOCAL_CFLAGS:= -std=c99
+
+LOCAL_MODULE:= libcsv
+
+include $(BUILD_SHARED_LIBRARY)
